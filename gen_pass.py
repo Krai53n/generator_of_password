@@ -27,7 +27,7 @@ def main():
         else:
             password += gen_letter(w_dig)
 
-    print('\nПороль уже сгенерирован, и он внизу:')
+    print('\nПароль уже сгенерирован, и он внизу:')
     print(password)
 
 def gen_letter(digit = 'n'):
