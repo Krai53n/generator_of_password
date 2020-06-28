@@ -2,7 +2,10 @@
 # author: kra53n
 # date: 23.06.20
 
+
 from random import randrange, choice
+from string import digits, ascii_lowercase
+
 
 def main():
     '''
@@ -30,19 +33,20 @@ def main():
     print('\nПароль уже сгенерирован, и он внизу:')
     print(password)
 
+
 def gen_letter(digit = 'n'):
-    letters = 'a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z'
-    letters = letters.split(',')
+    letters = ascii_lowercase
     if digit == 'y':
-        letter = randrange(10) + 1
+        letter = digits
         letter = str(letter)
-        letters.append(letter)
+        letters += letter
     letter = choice(letters)
     
-    cap = randrange(2)
-    if cap == 0:
+    capital_letter = randrange(2)
+    if capital_letter == 0:
         letter = letter.capitalize()
     return letter
+
 
 def ask_yes_no(question):
     while 1:
@@ -52,11 +56,13 @@ def ask_yes_no(question):
             break
     return yes_no
 
+
 def digit(question):
     num = '1'
     while num != int(num):
         num = input(question)
         num = int(num)
     return num
+
 
 main()
