@@ -1,2 +1,2 @@
-# generator_of_password
+# Generetor of passwords
 Python script which generate password
