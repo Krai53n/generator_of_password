@@ -9,8 +9,7 @@ def gen_letter(digit = 'n'):
     '''
     letters = ascii_lowercase
     if digit == 'y':
-        letter = digits
-        letter = str(letter)
+        letter = str(digits)
         letters += letter
     letter = choice(letters)
     
